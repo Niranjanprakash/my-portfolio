@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <nav class="navbar">
+        <div class="logo">PORTFOLIO</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1 class="hi">Welcome to My Portfolio</h1>
+            <p>Hello! I'm NIRANJAN, a passionate Frontend Developer with a knack for creating engaging, user-friendly websites and web applications. With a strong background in Html, CSS and JavaScript, I specialize in crafting clean, responsive designs that focus on functionality and user experience.</p>
+        </div>
+        <div class="photo">
+            <img src="images/img4.jpg" alt="Profile Photo">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p class="highlight">I am Niranjan from Tirupur.Curently Pursuing B.Tech Artificial Intelligence and Data Science in Sri Krishna College of Technology Coimbatore</p>
+            <p>I thrive on solving problems, learning new technologies. My goal is to build impactful solutions that make a difference.</p>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Transaction-System</h3>
+                <p>This is a description of the first project. It includes an overview of what the project is about, the technologies used, and any relevant details.</p>
+                <a href="https://github.com/Niranjanprakash/Transaction-System" class="view-button" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>My-Portfolio</h3>
+                <p>This is a description of the second project. It highlights the main features, challenges overcome, and the impact of the project.</p>
+                <a href="https://github.com/yourgithub/project2" class="view-button" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-list">
+            <div class="skill-card">
+                <h3>HTML & CSS</h3>
+                <p>Expert in crafting responsive layouts, structuring content, and styling using HTML5 and CSS3.</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Proficient in JavaScript, building interactive web pages and applications with frameworks like React and Angular.</p>
+            </div>
+            <div class="skill-card">
+                <h3>React</h3>
+                <p>Experienced in building dynamic and modern web applications using React, with state management and hooks.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Skilled in Python for web development, automation, data analysis, and machine learning with libraries like Django and Pandas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            
+            <form id="contact-form" name="submit-to-google-sheet">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <div id="submitted-message" style="display: none; color: green; font-size: 1.2rem; margin-top: 20px;">
+                Submitted!
+            </div>
+            
+    
+            
+            <div class="contact-details">
+                <div class="phone">
+                    <img src="https://img.icons8.com/fluency/48/email.png" alt="Email Icon">
+                <span>contact@example.com</span>
+                </div>
+                <div class="phone">
+                    <img src="https://img.icons8.com/fluency/48/phone.png" alt="Phone Icon">
+                <span>0123456789</span>
+                </div>
+                <div class="social-links">
+                    <h3>Find Me On</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_endless_horizon_29_/?next=%2F&hl=en" target="_blank">
+                            <img src="images/insta.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/niranjan-prakash-338773290/" target="_blank">
+                            <img src="images/link1.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://github.com/Niranjanprakash/niranjan" target="_blank">
+                            <img src="images/git1.png" alt="GitHub" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const submittedMessage = document.getElementById('submitted-message');
+    submittedMessage.style.display = 'block';
+
+    setTimeout(function() {
+        submittedMessage.style.display = 'none';
+    }, 3000);
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+});
+
+    </script>
+    
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbybXOMkB19WDqxx5yBAJF4nufNZDFGwmNm0FJwJUJqe4ImeHYtkf8m8y3daJVXdL1ty/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
